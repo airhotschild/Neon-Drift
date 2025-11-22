@@ -1,0 +1,14 @@
+{
+    "name": "Neon Drift",
+    "iconUrl": "https://neon-drift.vercel.app/icon.png",
+    "homeUrl": "https://neon-drift.vercel.app",
+    "imageUrl": "https://neon-drift.vercel.app/preview.png",
+    "buttonTitle": "Play",
+    "splashImageUrl": "https://neon-drift.vercel.app/splash.png",
+    "splashBackgroundColor": "#1a1a2e",
+    "frame": {
+        "version": "1",
+        "name": "Neon Drift",
+        "homeUrl": "https://neon-drift.vercel.app"
+    }
+}
