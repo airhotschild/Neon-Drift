@@ -1,14 +1,17 @@
 # Neon Drift
 
-An addictive neon-styled physics game built with Phaser 3 and Vite, featuring premium in-game purchases through Remix.gg integration.
+An addictive endless runner game with neon-styled graphics. Jump over obstacles, rack up points, and beat your high score!
 
 ## Features
 
-- 🎮 Interactive gameplay with Phaser 3
-- 💎 Premium purchase system
-- 🚀 Fast development with Vite
-- ✨ Particle effects and animations
-- 📱 Responsive design
+- 🎮 Endless runner gameplay
+- 🚀 One-button jump controls (SPACE or UP arrow)
+- ⚡ Dynamic obstacle generation
+- 🏆 High score system with localStorage persistence
+- 📈 Progressive difficulty
+- ✨ Neon particle effects
+- 🎨 Colorful gradient obstacles
+- 💀 Instant game over and restart
 
 ## Getting Started
 
