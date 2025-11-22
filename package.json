@@ -1,7 +1,7 @@
 {
-  "name": "premium-web-game",
+  "name": "neon-drift",
   "version": "1.0.0",
-  "description": "",
+  "description": "An addictive neon-styled physics game with particle effects",
   "main": "index.js",
   "scripts": {
     "dev": "vite",

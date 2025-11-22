@@ -1,6 +1,6 @@
-# Premium Web Game
+# Neon Drift
 
-A premium web game built with Phaser 3 and Vite, featuring in-game purchases through Remix.gg integration.
+An addictive neon-styled physics game built with Phaser 3 and Vite, featuring premium in-game purchases through Remix.gg integration.
 
 ## Features
 

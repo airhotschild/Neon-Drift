@@ -17,7 +17,7 @@ export default class PlayScene extends Phaser.Scene {
         graphics.fillRect(0, 0, width, height);
 
         // Title
-        const title = this.add.text(width / 2, 100, 'Premium Web Game', {
+        const title = this.add.text(width / 2, 100, 'Neon Drift', {
             fontSize: '48px',
             fontFamily: 'Arial, sans-serif',
             fontStyle: 'bold',
