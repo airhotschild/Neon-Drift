@@ -18,10 +18,10 @@ export default class BootScene extends Phaser.Scene {
         const loadingText = this.make.text({
             x: width / 2,
             y: height / 2 - 50,
-            text: 'Loading...',
+            text: 'Loading Neon Drift...',
             style: {
                 font: '20px monospace',
-                fill: '#ffffff'
+                fill: '#00ff88'
             }
         });
         loadingText.setOrigin(0.5, 0.5);
@@ -37,28 +37,27 @@ export default class BootScene extends Phaser.Scene {
         });
         percentText.setOrigin(0.5, 0.5);
 
-        this.load.on('progress', (value) => {
-            percentText.setText(parseInt(value * 100) + '%');
-            progressBar.clear();
-            progressBar.fillStyle(0x00ff00, 1);
-            progressBar.fillRect(width / 2 - 150, height / 2 - 20, 300 * value, 30);
+        // Simulate loading progress
+        let progress = 0;
+        const timer = this.time.addEvent({
+            delay: 50,
+            callback: () => {
+                progress += 0.05;
+                if (progress > 1) progress = 1;
+
+                percentText.setText(parseInt(progress * 100) + '%');
+                progressBar.clear();
+                progressBar.fillStyle(0x00ff88, 1);
+                progressBar.fillRect(width / 2 - 150, height / 2 - 20, 300 * progress, 30);
+
+                if (progress >= 1) {
+                    timer.remove();
+                    this.time.delayedCall(200, () => {
+                        this.scene.start('PlayScene');
+                    });
+                }
+            },
+            loop: true
         });
-
-        this.load.on('complete', () => {
-            progressBar.destroy();
-            progressBox.destroy();
-            loadingText.destroy();
-            percentText.destroy();
-        });
-
-        // Load assets here (images, audio, etc.)
-        // For now, we'll just add a small delay to show the loading screen
-        for (let i = 0; i < 10; i++) {
-            this.load.image('dummy' + i, 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==');
-        }
-    }
-
-    create() {
-        this.scene.start('PlayScene');
     }
 }
